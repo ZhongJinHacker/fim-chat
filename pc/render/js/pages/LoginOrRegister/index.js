@@ -22,7 +22,12 @@ export default class LoginOrRegister extends Component {
     renderLogin() {
         return (
             <div>
-                login page
+                <div>账号：</div>
+                <input />
+                <div>密码：</div>
+                <input />
+                <button onClick={() => this.onLoginClick()}>登录</button>
+                <button onClick={() => this.toggle()}>去注册</button>
             </div>
         );
     }
@@ -30,8 +35,19 @@ export default class LoginOrRegister extends Component {
     renderRegister() {
         return (
             <div>
-                Register page
+                <div>Register page</div>
+                <div onClick={() => this.toggle()}>去登录</div>
             </div>
         );
+    }
+
+    toggle() {
+        this.setState({
+            isLoginFunc: !this.state.isLoginFunc
+        });
+    }
+
+    onLoginClick() {
+        console.log('onLoginClick.');
     }
 }
