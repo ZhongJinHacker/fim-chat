@@ -36,7 +36,7 @@ export default class LoginOrRegister extends Component {
         return (
             <div>
                 <div>Register page</div>
-                <div onClick={() => this.toggle()}>去登录</div>
+                <button onClick={() => this.toggle()}>去登录</button>
             </div>
         );
     }
